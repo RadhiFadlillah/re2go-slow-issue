@@ -20,13 +20,14 @@ func main() {
 
 	for _, fileName := range fileNames {
 		data := openFile(fileName)
-		re2goMatch, re2goDuration := measureRe2Go(data, re2Email)
 		stdGoMatch, stdGoDuration := measureGoStdRegex(data, rxEmail)
+		re2CustomMatch, re2CustomDuration := measureRe2Go(data, re2EmailCustomCheck)
+		re2SentinelMatch, re2SentinelDuration := measureRe2Go(data, re2EmailSentinel)
 
 		fmt.Printf("File %q\n", fileName)
-		fmt.Printf("  re2go: found %d matches in %d ms\n", re2goMatch, re2goDuration)
-		fmt.Printf("  std  : found %d matches in %d ms\n", stdGoMatch, stdGoDuration)
-		fmt.Printf("  re2go is %dx slower than std\n", re2goDuration/stdGoDuration)
+		fmt.Printf("  Go std regex        : found %d matches in %d ms\n", stdGoMatch, stdGoDuration)
+		fmt.Printf("  re2go custom check  : found %d matches in %d ms (%dx slower)\n", re2CustomMatch, re2CustomDuration, re2CustomDuration/stdGoDuration)
+		fmt.Printf("  re2go sentinel bound: found %d matches in %d ms (%dx slower)\n", re2SentinelMatch, re2SentinelDuration, re2SentinelDuration/stdGoDuration)
 		fmt.Println()
 	}
 }

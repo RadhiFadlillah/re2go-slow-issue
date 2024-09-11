@@ -1,6 +1,6 @@
 package main
 
-func re2Email(bytes []byte) int {
+func re2EmailCustomCheck(bytes []byte) int {
 	var count int
 	var cur, mar int
 	lim := len(bytes)
@@ -10,7 +10,7 @@ func re2Email(bytes []byte) int {
 		if cur < lim {
 			return bytes[cur]
 		}
-		return 0
+		return 0 // fake null
 	}
 
 	for { /*!re2c
