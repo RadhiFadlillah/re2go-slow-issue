@@ -6,44 +6,74 @@ To run this repository, you can use `make` command or `go run *.go`. Here is the
 
 ```
 File "sample/01.html"
-  Go std regex     : 20,536 µs
-  re2go custom     : 9,724,611 µs (473x slower)
-  re2go sentinel   : 7,793,693 µs (379x slower)
-  re2go sentinel BV: 2,085,287 µs (101x slower)
-  re2go 2 rules    : 4,554 µs (4x faster)
-  re2go 2 rules BV : 4,591 µs (4x faster)
-  re2go 3 rules    : 4,247 µs (4x faster)
-  re2go 3 rules BV : 6,401 µs (3x faster)
+  Go std regex     : 20,654 µs
+  re2go custom     : 9,975,617 µs (482x slower)
+  re2go sentinel   : 8,570,601 µs (414x slower)
+  re2go sentinel BV: 2,343,542 µs (113x slower)
+  re2go 2 rules    : 4,679 µs (4x faster)
+  re2go 2 rules BV : 5,155 µs (4x faster)
+  re2go 3 rules    : 4,705 µs (4x faster)
+  re2go 3 rules BV : 6,839 µs (3x faster)
 
 File "sample/02.html"
-  Go std regex     : 15,292 µs
-  re2go custom     : 7,709,193 µs (504x slower)
-  re2go sentinel   : 6,145,609 µs (401x slower)
-  re2go sentinel BV: 1,806,896 µs (118x slower)
-  re2go 2 rules    : 2,392 µs (6x faster)
-  re2go 2 rules BV : 2,320 µs (6x faster)
-  re2go 3 rules    : 2,291 µs (6x faster)
-  re2go 3 rules BV : 3,865 µs (3x faster)
+  Go std regex     : 19,618 µs
+  re2go custom     : 8,544,522 µs (435x slower)
+  re2go sentinel   : 6,828,683 µs (348x slower)
+  re2go sentinel BV: 2,073,193 µs (105x slower)
+  re2go 2 rules    : 2,963 µs (6x faster)
+  re2go 2 rules BV : 2,661 µs (7x faster)
+  re2go 3 rules    : 2,507 µs (7x faster)
+  re2go 3 rules BV : 4,235 µs (4x faster)
 
 File "sample/03.html"
-  Go std regex     : 13,901 µs
-  re2go custom     : 1,936,579 µs (139x slower)
-  re2go sentinel   : 1,444,875 µs (103x slower)
-  re2go sentinel BV: 590,062 µs (42x slower)
-  re2go 2 rules    : 2,135 µs (6x faster)
-  re2go 2 rules BV : 1,529 µs (9x faster)
-  re2go 3 rules    : 2,223 µs (6x faster)
-  re2go 3 rules BV : 2,260 µs (6x faster)
+  Go std regex     : 21,788 µs
+  re2go custom     : 2,214,779 µs (101x slower)
+  re2go sentinel   : 1,502,531 µs (68x slower)
+  re2go sentinel BV: 642,667 µs (29x slower)
+  re2go 2 rules    : 2,428 µs (8x faster)
+  re2go 2 rules BV : 1,759 µs (12x faster)
+  re2go 3 rules    : 2,591 µs (8x faster)
+  re2go 3 rules BV : 2,542 µs (8x faster)
 
 File "sample/04.html"
-  Go std regex     : 17,347 µs
-  re2go custom     : 1,070,713 µs (61x slower)
-  re2go sentinel   : 731,417 µs (42x slower)
-  re2go sentinel BV: 312,772 µs (18x slower)
-  re2go 2 rules    : 713,930 µs (41x slower)
-  re2go 2 rules BV : 342,316 µs (19x slower)
-  re2go 3 rules    : 4,749 µs (3x faster)
-  re2go 3 rules BV : 6,968 µs (2x faster)
+  Go std regex     : 19,944 µs
+  re2go custom     : 1,123,340 µs (56x slower)
+  re2go sentinel   : 811,518 µs (40x slower)
+  re2go sentinel BV: 371,667 µs (18x slower)
+  re2go 2 rules    : 772,873 µs (38x slower)
+  re2go 2 rules BV : 364,357 µs (18x slower)
+  re2go 3 rules    : 4,572 µs (4x faster)
+  re2go 3 rules BV : 7,619 µs (2x faster)
+
+File "sample/05.html"
+  Go std regex     : 8,585 µs
+  re2go custom     : 4,371 µs (1x faster)
+  re2go sentinel   : 3,261 µs (2x faster)
+  re2go sentinel BV: 493 µs (17x faster)
+  re2go 2 rules    : 3,079 µs (2x faster)
+  re2go 2 rules BV : 509 µs (16x faster)
+  re2go 3 rules    : 3,301 µs (2x faster)
+  re2go 3 rules BV : 689 µs (12x faster)
+
+File "sample/06.html"
+  Go std regex     : 8,690 µs
+  re2go custom     : 12,951 µs (1x slower)
+  re2go sentinel   : 9,488 µs (1x slower)
+  re2go sentinel BV: 6,960 µs (1x faster)
+  re2go 2 rules    : 9,086 µs (1x slower)
+  re2go 2 rules BV : 7,932 µs (1x faster)
+  re2go 3 rules    : 2,674 µs (3x faster)
+  re2go 3 rules BV : 3,838 µs (2x faster)
+
+File "sample/07.html"
+  Go std regex     : 78,352 µs
+  re2go custom     : 55,233 µs (1x faster)
+  re2go sentinel   : 31,518 µs (2x faster)
+  re2go sentinel BV: 27,455 µs (2x faster)
+  re2go 2 rules    : 24,278 µs (3x faster)
+  re2go 2 rules BV : 25,478 µs (3x faster)
+  re2go 3 rules    : 23,033 µs (3x faster)
+  re2go 3 rules BV : 36,690 µs (2x faster)
 ```
 
 ### Code Summary

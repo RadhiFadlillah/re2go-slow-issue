@@ -21,6 +21,9 @@ func main() {
 		"sample/02.html",
 		"sample/03.html",
 		"sample/04.html",
+		"sample/05.html",
+		"sample/06.html",
+		"sample/07.html",
 	}
 
 	for _, fileName := range fileNames {
