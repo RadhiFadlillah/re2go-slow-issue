@@ -15,9 +15,9 @@ func re2EmailCustomCheck(bytes []byte) int {
 
 	for { /*!re2c
 		re2c:eof = 0;
-		re2c:yyfill:enable = 0;
-		re2c:posix-captures = 0;
-		re2c:case-insensitive = 0;
+		re2c:yyfill:enable      = 0;
+		re2c:posix-captures     = 0;
+		re2c:case-insensitive   = 0;
 		re2c:define:YYCTYPE     = byte;
 		re2c:define:YYPEEK      = "peek(bytes, cur, lim)";
 		re2c:define:YYSKIP      = "cur += 1";
